@@ -7,6 +7,7 @@ using Starter.Core;
 
 namespace Starter.Api.Controllers
 {
+    [ApiController]
     public class SnakeController : ControllerBase
     {
         /// <summary>
