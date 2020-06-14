@@ -20,7 +20,7 @@ namespace Starter.Api.Controllers
             var response = new InitResponse
             {
                 ApiVersion = "1",
-                Author = "YourName",
+                Author = "",
                 Color = "#FFFFFF",
                 Head = "default",
                 Tail = "default"
