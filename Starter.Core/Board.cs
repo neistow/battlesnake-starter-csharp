@@ -36,5 +36,13 @@ namespace Starter.Core
         /// Example: [{"id": "snake-one", ...}, ...]
         /// </summary>
         public IEnumerable<Snake> Snakes { get; set; }
+
+
+        /// <summary>
+        /// Array of coordinates representing hazardous locations on the game board. These
+        /// will only appear in some game modes.
+        /// Example: [{"x": 0, "y": 0}, ..., {"x": 0, "y": 1}]
+        /// </summary>
+        public IEnumerable<Point> Hazards { get; set; }
     }
 }
