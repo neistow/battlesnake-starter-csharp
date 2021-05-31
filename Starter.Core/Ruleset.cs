@@ -7,15 +7,15 @@
     {
         /// <summary>
         /// The name of the ruleset.
+        /// Example: "standard"
         /// </summary>
-        /// <example>standard</example>
         public string Name { get; set; }
 
 
         /// <summary>
         /// The version of the ruleset.
+        /// Example: "v1.2.3"
         /// </summary>
-        /// <example>v1.2.3</example>
         public string Version { get; set; }
 
     }

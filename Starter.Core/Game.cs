@@ -21,7 +21,7 @@
 
         /// <summary>
         /// Information about the ruleset being used to run this game.
-        /// Example: Example: {"name": "standard", "version": "v1.2.3"}
+        /// Example: {"name": "standard", "version": "v1.2.3"}
         /// </summary>
         public Ruleset Ruleset { get; set; }
     }
