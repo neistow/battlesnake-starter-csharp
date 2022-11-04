@@ -6,17 +6,21 @@
     public class Ruleset
     {
         /// <summary>
-        /// The name of the ruleset.
-        /// Example: "standard"
+        /// Name of the ruleset being used to run this game.
+        /// Possible values include: standard, solo, royale, squad, constrictor, wrapped.
+        /// See Game Modes for more information on each ruleset.Example: "standard"
         /// </summary>
         public string Name { get; set; }
 
-
         /// <summary>
-        /// The version of the ruleset.
-        /// Example: "v1.2.3"
+        /// The release version of the Rules module used in this game.
+        /// Example: "version": "v1.2.3"
         /// </summary>
         public string Version { get; set; }
 
+        /// <summary>
+        /// A collection of specific settings being used by the current game that control how the rules are applied.
+        /// </summary>
+        public RulesetSettings Settings { get; set; }
     }
 }

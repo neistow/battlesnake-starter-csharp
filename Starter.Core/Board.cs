@@ -15,21 +15,21 @@ namespace Starter.Core
         /// </summary>
         public int Height { get; set; }
 
-        
+
         /// <summary>
         /// Width of the game board.
         /// Example: 11
         /// </summary>
         public int Width { get; set; }
-    
-        
+
+
         /// <summary>
-        /// Array of coordinates representing food locations on the game board.
+        /// Array of <see cref="Coordinate"/>s representing food locations on the game board.
         /// Example: [{"x": 5, "y": 5}, ..., {"x": 2, "y": 6}]
         /// </summary>
-        public IEnumerable<Point> Food { get; set; }
+        public IEnumerable<Coordinate> Food { get; set; }
 
-        
+
         /// <summary>
         /// Array of <see cref="Snake"/>s representing all Battlesnakes remaining on the game
         /// board (including yourself if you haven't been eliminated).
@@ -39,10 +39,10 @@ namespace Starter.Core
 
 
         /// <summary>
-        /// Array of coordinates representing hazardous locations on the game board. These
+        /// Array of <see cref="Coordinate"/>s representing hazardous locations on the game board. These
         /// will only appear in some game modes.
         /// Example: [{"x": 0, "y": 0}, ..., {"x": 0, "y": 1}]
         /// </summary>
-        public IEnumerable<Point> Hazards { get; set; }
+        public IEnumerable<Coordinate> Hazards { get; set; }
     }
 }
