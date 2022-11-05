@@ -1,41 +1,34 @@
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+namespace Starter.Api;
 
-namespace Starter.Api
+public class Startup
 {
-    public class Startup
+    public IConfiguration Configuration { get; }
+
+    public Startup(IConfiguration configuration)
     {
-        public IConfiguration Configuration { get; }
+        Configuration = configuration;
+    }
 
-        public Startup(IConfiguration configuration)
+    public void ConfigureServices(IServiceCollection services)
+    {
+        services.AddControllers(o => { o.OutputFormatters.Clear(); })
+            .AddNewtonsoftJson(o => { o.UseCamelCasing(processDictionaryKeys: true); });
+    }
+
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+    {
+        if (env.IsDevelopment())
         {
-            Configuration = configuration;
+            app.UseDeveloperExceptionPage();
         }
 
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddControllers(o => { o.OutputFormatters.Clear(); })
-                .AddNewtonsoftJson(o => { o.UseCamelCasing(processDictionaryKeys: true); });
-        }
+        app.UseHttpsRedirection();
+        app.UseStatusCodePages();
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
+        app.UseRouting();
 
-            app.UseHttpsRedirection();
-            app.UseStatusCodePages();
+        app.UseCors(o => { o.AllowAnyOrigin(); });
 
-            app.UseRouting();
-
-            app.UseCors(o => { o.AllowAnyOrigin(); });
-
-            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
-        }
+        app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
     }
 }
