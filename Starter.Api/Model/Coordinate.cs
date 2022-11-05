@@ -1,4 +1,4 @@
-﻿namespace Starter.Core;
+﻿namespace Starter.Api;
 
 /// <summary>
 /// Coordinate on the 2D grid game board.

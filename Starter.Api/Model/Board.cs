@@ -1,4 +1,4 @@
-﻿namespace Starter.Core;
+﻿namespace Starter.Api;
 
 /// <summary>
 /// The game board is represented by a standard 2D grid, oriented with (0,0) in the bottom left.

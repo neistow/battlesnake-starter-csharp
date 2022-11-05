@@ -4,7 +4,4 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
-    <ItemGroup>
-      <ProjectReference Include="..\Starter.Core\Starter.Core.csproj" />
-    </ItemGroup>
 </Project>

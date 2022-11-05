@@ -1,4 +1,4 @@
-namespace Starter.Core;
+namespace Starter.Api;
 
 public class RulesetSettings
 {

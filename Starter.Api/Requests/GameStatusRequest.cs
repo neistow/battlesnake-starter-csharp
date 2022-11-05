@@ -1,6 +1,4 @@
-﻿using Starter.Core;
-
-namespace Starter.Api.Requests;
+﻿namespace Starter.Api.Requests;
 
 public class GameStatusRequest
 {

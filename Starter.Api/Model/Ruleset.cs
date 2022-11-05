@@ -1,4 +1,4 @@
-﻿namespace Starter.Core;
+﻿namespace Starter.Api;
 
 /// <summary>
 /// Information about the ruleset being used to run this game.
