@@ -2,10 +2,6 @@ using Starter.Api.Requests;
 using Starter.Api.Responses;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddEndpointsApiExplorer();
-
 var app = builder.Build();
 app.UseHttpsRedirection();
 
