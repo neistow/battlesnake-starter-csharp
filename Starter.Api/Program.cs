@@ -39,11 +39,10 @@ app.MapPost("/start", (GameStatusRequest gameStatusRequest) =>
 app.MapPost("/move", (GameStatusRequest gameStatusRequest) =>
 {
     var direction = new List<string> { "down", "left", "right", "up" };
-    var rng = new Random();
 
     return new MoveResponse
     {
-        Move = direction[rng.Next(direction.Count)],
+        Move = direction[Random.Shared.Next(direction.Count)],
         Shout = "I am moving!"
     };
 });
