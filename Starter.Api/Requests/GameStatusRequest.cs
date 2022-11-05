@@ -8,7 +8,7 @@ namespace Starter.Api.Requests
         /// <summary>
         /// <see cref="Game"/> Object describing the game being played.
         /// </summary>
-        public Game Game { get; set; }
+        public Game Game { get; set; } = new Game();
 
         /// <summary>
         /// start: Turn number of the game being played (0 for new games).
@@ -22,11 +22,11 @@ namespace Starter.Api.Requests
         /// move: <see cref="Board"/> Object describing the game board on this turn.
         /// end: <see cref="Board"/> Object describing the final state of the game board.
         /// </summary>
-        public Board Board { get; set; }
+        public Board Board { get; set; } = new Board();
 
         /// <summary>
         /// <see cref="Snake"/> Object describing your Battlesnake.
         /// </summary>
-        public Snake You { get; set; }
+        public Snake You { get; set; } = new Snake();
     }
 }

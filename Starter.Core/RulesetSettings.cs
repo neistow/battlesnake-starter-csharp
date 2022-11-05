@@ -17,7 +17,7 @@ namespace Starter.Core
         /// </summary>
         public int HazardDamagePerTurn { get; set; }
 
-        public RoyaleModeRulesetSettings Royale { get; set; }
+        public RoyaleModeRulesetSettings Royale { get; set; } = new RoyaleModeRulesetSettings();
 
         public SquadModeRulesetSettings Squad { get; set; }
 

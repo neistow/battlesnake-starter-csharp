@@ -10,17 +10,17 @@
         /// Possible values include: standard, solo, royale, squad, constrictor, wrapped.
         /// See Game Modes for more information on each ruleset.Example: "standard"
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         /// <summary>
         /// The release version of the Rules module used in this game.
         /// Example: "version": "v1.2.3"
         /// </summary>
-        public string Version { get; set; }
+        public string Version { get; set; } = string.Empty;
 
         /// <summary>
         /// A collection of specific settings being used by the current game that control how the rules are applied.
         /// </summary>
-        public RulesetSettings Settings { get; set; }
+        public RulesetSettings Settings { get; set; } = new RulesetSettings();
     }
 }

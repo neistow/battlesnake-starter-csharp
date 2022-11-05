@@ -27,7 +27,7 @@ namespace Starter.Core
         /// Array of <see cref="Coordinate"/>s representing food locations on the game board.
         /// Example: [{"x": 5, "y": 5}, ..., {"x": 2, "y": 6}]
         /// </summary>
-        public IEnumerable<Coordinate> Food { get; set; }
+        public IEnumerable<Coordinate> Food { get; set; } = new Coordinate[0];
 
 
         /// <summary>
@@ -35,7 +35,7 @@ namespace Starter.Core
         /// board (including yourself if you haven't been eliminated).
         /// Example: [{"id": "snake-one", ...}, ...]
         /// </summary>
-        public IEnumerable<Snake> Snakes { get; set; }
+        public IEnumerable<Snake> Snakes { get; set; } = new Snake[0];
 
 
         /// <summary>
@@ -43,6 +43,6 @@ namespace Starter.Core
         /// will only appear in some game modes.
         /// Example: [{"x": 0, "y": 0}, ..., {"x": 0, "y": 1}]
         /// </summary>
-        public IEnumerable<Coordinate> Hazards { get; set; }
+        public IEnumerable<Coordinate> Hazards { get; set; } = new Coordinate[0];
     }
 }
