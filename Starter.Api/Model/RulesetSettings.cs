@@ -19,7 +19,7 @@ public class RulesetSettings
 
     public RoyaleModeRulesetSettings Royale { get; set; } = new RoyaleModeRulesetSettings();
 
-    public SquadModeRulesetSettings Squad { get; set; }
+    public SquadModeRulesetSettings Squad { get; set; } = new SquadModeRulesetSettings();
 
     public class RoyaleModeRulesetSettings
     {
